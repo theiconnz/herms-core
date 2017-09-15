@@ -4,12 +4,13 @@
     "license": "BSD-3-Clause",
     "type": "theicon-zf",
     "version": "0.0.1",
+    "minimum-stability":"stable",
     "homepage": "https://theicon.co.nz",
     "prefer-stable": true,
     "require": {
         "php": "^7.0",
         "zendframework/skeleton-application": "*",
-        "theiconnz/theicon-zf-installer":"*"
+        "theiconnz/zf-installer":"*"
     },
     "autoload": {
         "psr-4": {
