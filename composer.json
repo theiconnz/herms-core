@@ -1,0 +1,24 @@
+{
+    "name": "theiconnz/herms-core",
+    "description": "Herms core functions module",
+    "license": "BSD-3-Clause",
+    "type": "theicon-zf",
+    "version": "0.0.1",
+    "homepage": "https://theicon.co.nz",
+    "prefer-stable": true,
+    "require": {
+        "php": "^5.6 || ^7.0",
+        "zendframework/skeleton-application": "*",
+        "theiconnz/theicon-zf-installer":"*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Theiconnz\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "TheiconnzTest\\": "test/"
+        }
+    }
+}
