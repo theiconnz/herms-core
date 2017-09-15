@@ -7,7 +7,7 @@
     "homepage": "https://theicon.co.nz",
     "prefer-stable": true,
     "require": {
-        "php": "^5.6 || ^7.0",
+        "php": "^7.0",
         "zendframework/skeleton-application": "*",
         "theiconnz/theicon-zf-installer":"*"
     },
