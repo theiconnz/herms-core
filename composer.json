@@ -10,7 +10,7 @@
     "require": {
         "php": "^7.0",
         "zendframework/skeleton-application": "*",
-        "theiconnz/zf-installer":"*"
+        "theiconnz/herms-installer":"*"
     },
     "autoload": {
         "psr-4": {
