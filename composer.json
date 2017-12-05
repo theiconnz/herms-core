@@ -1,25 +1,28 @@
 {
-    "name": "theiconnz/herms-core",
-    "description": "Herms core functions module",
-    "license": "BSD-3-Clause",
-    "type": "theicon-zf",
-    "version": "0.0.1",
-    "minimum-stability":"stable",
-    "homepage": "https://theicon.co.nz",
-    "prefer-stable": true,
-    "require": {
-        "php": "^7.0",
-        "zendframework/skeleton-application": "*",
-        "theiconnz/herms-installer":"*"
-    },
-    "autoload": {
-        "psr-4": {
-            "Theiconnz\\": "src/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "TheiconnzTest\\": "test/"
-        }
-    }
+	"name" : "theiconnz/herms-core",
+	"description" : "Herms core functions module",
+	"license" : "BSD-3-Clause",
+	"type" : "theicon-zf",
+	"version" : "0.0.1",
+	"minimum-stability" : "stable",
+	"homepage" : "https://theicon.co.nz",
+	"prefer-stable" : true,
+	"require" : {
+		"php" : "^7.0",
+		"zendframework/skeleton-application" : "*",
+		"theiconnz/herms-installer" : "*",
+		"zendframework/zend-db" : "~2.8",
+		"zendframework/zend-console" : ">=2.6",
+		"zendframework/zend-math" : ">=3.0.0"
+	},
+	"autoload" : {
+		"psr-4" : {
+			"Theiconnz\\" : "src/"
+		}
+	},
+	"autoload-dev" : {
+		"psr-4" : {
+			"TheiconnzTest\\" : "test/"
+		}
+	}
 }
