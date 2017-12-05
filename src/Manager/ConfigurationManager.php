@@ -28,7 +28,7 @@ use HermsCore\Mapper\DbConfigurationMapper;
 class ConfigurationManager implements ConfigurationServiceInterface
 {
 	/*
-	* @var FgCore\Interfaces\ConfigurationMapperInterface
+	* @var HermsCore\Interfaces\ConfigurationMapperInterface
 	*/
 	protected $configMapper;
 	
@@ -57,7 +57,7 @@ class ConfigurationManager implements ConfigurationServiceInterface
 	/**
 	* {@inheritDoc}
 	*/
-	public function save(\FgCore\Interfaces\ConfigurationInterface $config)
+	public function save(\HermsCore\Interfaces\ConfigurationInterface $config)
 	{
 		return $this->configMapper->save($config);	
 	}

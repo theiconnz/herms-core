@@ -7,7 +7,7 @@
  * PHP version 7
  *
  * @category Module
- * @package  FgCore
+ * @package  HermsCore
  * @author   Don Nuwinda <nuwinda@gmail.com>
  * @license  GPL http://forge.co.nz
  * @link     http://forge.co.nz
