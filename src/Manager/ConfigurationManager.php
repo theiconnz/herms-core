@@ -1,8 +1,8 @@
 <?php
 /**
- * Herms Core (https://theicon.co.nz/)
+ * Herms (http://theicon.co.nz/)
  *
- * Module
+ * Manager
  *
  * PHP version 7
  *
@@ -22,8 +22,8 @@ use HermsCore\Mapper\DbConfigurationMapper;
  * @category Manager
  * @package  HermsCore
  * @author   Don Nuwinda <nuwinda@gmail.com>
- * @license  GPL https://theicon.co.nz
- * @link     https://theicon.co.nz
+ * @license  GPL http://theicon.co.nz
+ * @link     http://theicon.co.nz
  */
 class ConfigurationManager implements ConfigurationServiceInterface
 {

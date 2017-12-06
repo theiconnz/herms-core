@@ -1,8 +1,8 @@
 <?php
 /**
- * Herms Core (https://theicon.co.nz/)
+ * Herms (http://theicon.co.nz/)
  *
- * Module
+ * Manager
  *
  * PHP version 7
  *

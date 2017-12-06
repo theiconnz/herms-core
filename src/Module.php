@@ -1,6 +1,6 @@
 <?php
 /**
- * Herms Core (https://theicon.co.nz/)
+ * Herms Configuration (https://theicon.co.nz/)
  *
  * Module
  *
@@ -9,18 +9,19 @@
  * @category Module
  * @package  HermsCore
  * @author   Don Nuwinda <nuwinda@gmail.com>
- * @license  GPL http://forge.co.nz
- * @link     http://forge.co.nz
+ * @license  GPL http://theicon.co.nz
+ * @link     http://theicon.co.nz
  */
 namespace HermsCore;
+
 /**
  * Module Class
  *
  * @category Module
  * @package  HermsCore
  * @author   Don Nuwinda <nuwinda@gmail.com>
- * @license  GPL https://theicon.co.nz
- * @link     https://theicon.co.nz
+ * @license  GPL http://theicon.co.nz
+ * @link     http://theicon.co.nz
  */
 class Module
 {
@@ -33,4 +34,5 @@ class Module
     {
         return include __DIR__ . '/../config/module.config.php';
     }
+
 }

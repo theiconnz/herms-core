@@ -17,10 +17,12 @@ namespace HermsCore\Service;
 use Interop\Container\ContainerInterface;
 use Zend\ServiceManager\FactoryInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
-use HermsCore\Manager\ConfigurationManager;
+use Zend\Hydrator\ClassMethods;
+use HermsCore\Mapper\DbConfigurationMapper;
+use HermsCore\Model\Configuration;
 
 /**
- * ConfigurationFactory Class
+ * DbConfigurationMapperFactory Class
  *
  * @category Service
  * @package  HermsCore
@@ -28,7 +30,7 @@ use HermsCore\Manager\ConfigurationManager;
  * @license  GPL http://theicon.co.nz
  * @link     http://theicon.co.nz
  */
-class ConfigurationFactory implements FactoryInterface
+class DbConfigurationMapperFactory implements FactoryInterface
 {
     /**
      * Factory for zend-servicemanager v3.
@@ -41,10 +43,12 @@ class ConfigurationFactory implements FactoryInterface
     public function __invoke(
         ContainerInterface $container,
         $requestedName,
-        array $options = null)
-    {
-		return new ConfigurationManager(
-			$container->get('HermsCore\Mapper\DbConfigurationMapper')
+        array $options = null
+	) {
+		return new DbConfigurationMapper(
+			$container->get('Zend\Db\Adapter\Adapter'),
+			new ClassMethods(false),
+			new Configuration()
 		);
 	}
 	
@@ -54,10 +58,13 @@ class ConfigurationFactory implements FactoryInterface
      * Proxies to `__invoke()`.
      *
      * @param ServiceLocatorInterface $serviceLocator
-     * @return Logger
      */
-    public function createService(ServiceLocatorInterface $serviceLocator)
-    {
-        return $this($serviceLocator, Service\ConfigurationFactory::class);
+    public function createService(
+		ServiceLocatorInterface $serviceLocator
+	) {
+        return $this(
+			$serviceLocator,
+			HermsCore\Service\DbConfigurationMapperFactory
+		);
     }
 }

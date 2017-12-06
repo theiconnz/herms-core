@@ -17,10 +17,10 @@ namespace HermsCore\Service;
 use Interop\Container\ContainerInterface;
 use Zend\ServiceManager\FactoryInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
-use HermsCore\Manager\ConfigurationManager;
+use HermsCore\Manager\CacheManager;
 
 /**
- * ConfigurationFactory Class
+ * CacheFactory Class
  *
  * @category Service
  * @package  HermsCore
@@ -28,7 +28,7 @@ use HermsCore\Manager\ConfigurationManager;
  * @license  GPL http://theicon.co.nz
  * @link     http://theicon.co.nz
  */
-class ConfigurationFactory implements FactoryInterface
+class CacheFactory implements FactoryInterface
 {
     /**
      * Factory for zend-servicemanager v3.
@@ -36,18 +36,18 @@ class ConfigurationFactory implements FactoryInterface
      * @param ContainerInterface $container
      * @param string $name
      * @param null|array $options
-     * @return Logger
+     *
+     * @return object Cache
      */
     public function __invoke(
         ContainerInterface $container,
         $requestedName,
         array $options = null)
     {
-		return new ConfigurationManager(
-			$container->get('HermsCore\Mapper\DbConfigurationMapper')
-		);
-	}
-	
+        $cache = new CacheManager();
+        return $cache->getCache();
+    }
+    
     /**
      * Factory for zend-servicemanager v2.
      *
@@ -58,6 +58,6 @@ class ConfigurationFactory implements FactoryInterface
      */
     public function createService(ServiceLocatorInterface $serviceLocator)
     {
-        return $this($serviceLocator, Service\ConfigurationFactory::class);
+        return $this($serviceLocator, Service\CacheFactory::class);
     }
 }

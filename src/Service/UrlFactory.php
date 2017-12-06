@@ -17,10 +17,10 @@ namespace HermsCore\Service;
 use Interop\Container\ContainerInterface;
 use Zend\ServiceManager\FactoryInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
-use HermsCore\Manager\ConfigurationManager;
+use HermsCore\Manager\UrlManager;
 
 /**
- * ConfigurationFactory Class
+ * UrlFactory Class
  *
  * @category Service
  * @package  HermsCore
@@ -28,7 +28,7 @@ use HermsCore\Manager\ConfigurationManager;
  * @license  GPL http://theicon.co.nz
  * @link     http://theicon.co.nz
  */
-class ConfigurationFactory implements FactoryInterface
+class UrlFactory implements FactoryInterface
 {
     /**
      * Factory for zend-servicemanager v3.
@@ -43,11 +43,9 @@ class ConfigurationFactory implements FactoryInterface
         $requestedName,
         array $options = null)
     {
-		return new ConfigurationManager(
-			$container->get('HermsCore\Mapper\DbConfigurationMapper')
-		);
-	}
-	
+        return new UrlManager();
+    }
+    
     /**
      * Factory for zend-servicemanager v2.
      *
@@ -58,6 +56,6 @@ class ConfigurationFactory implements FactoryInterface
      */
     public function createService(ServiceLocatorInterface $serviceLocator)
     {
-        return $this($serviceLocator, Service\ConfigurationFactory::class);
+        return $this($serviceLocator, Service\UrlFactory::class);
     }
 }

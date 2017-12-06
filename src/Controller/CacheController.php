@@ -1,6 +1,6 @@
 <?php
 /**
- * Herms Core (https://theicon.co.nz/)
+ * Cache Controller (https://theicon.co.nz/)
  *
  * Module
  *
@@ -43,6 +43,6 @@ class CacheController extends AbstractActionController
 	
     public function resetpasswordAction()
     {
-        return "Done! has received an email with his new password.\n";
+        return "Done! $userEmail has received an email with his new password.\n";
     }
 }

@@ -17,12 +17,12 @@
 	},
 	"autoload" : {
 		"psr-4" : {
-			"Theiconnz\\" : "src/"
+			"HermsCore\\" : "src/"
 		}
 	},
 	"autoload-dev" : {
 		"psr-4" : {
-			"TheiconnzTest\\" : "test/"
+			"HermsCoreTest\\" : "test/"
 		}
 	}
 }

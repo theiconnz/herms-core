@@ -1,8 +1,8 @@
 <?php
 /**
- * Herms Core (https://theicon.co.nz/)
+ * Herms (http://theicon.co.nz/)
  *
- * Module
+ * Config
  *
  * PHP version 7
  *
@@ -12,6 +12,7 @@
  * @license  GPL http://theicon.co.nz
  * @link     http://theicon.co.nz
  */
+ 
 namespace HermsCore;
 
 use Zend\Router\Http\Literal;
@@ -60,8 +61,8 @@ return [
         'factories' => [
             'UrlManager' => Service\UrlFactory::class,
             'CacheManager' => Service\CacheFactory::class,
-			'ConfigurationFactory' => Service\ConfigurationFactory::class,
-			'DbConfigurationMapper' => 'HermsCore\Service\DbConfigurationMapperFactory',
+			'HermsCore\Service\ConfigurationFactory' => Service\ConfigurationFactory::class,
+			'HermsCore\Mapper\DbConfigurationMapper' => 'HermsCore\Service\DbConfigurationMapperFactory',
 			'Zend\Db\Adapter\Adapter'  => 'Zend\Db\Adapter\AdapterServiceFactory',
           ],
     ],

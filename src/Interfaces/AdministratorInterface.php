@@ -15,7 +15,7 @@
 namespace HermsCore\Interfaces;
 
 /**
- * ConfigurationInterface
+ * AdministratorInterface
  *
  * @category Interface
  * @package  HermsCore
@@ -23,61 +23,76 @@ namespace HermsCore\Interfaces;
  * @license  GPL http://theicon.co.nz
  * @link     http://theicon.co.nz
  */
-interface ConfigurationInterface
+interface AdministratorInterface
 {
      /**
-      * Return configuration id
+      * Return Admin id
       *
       * @return int
       */
-     public function getId();
+     public function getAdminId();
 
      /**
-      * Return the name
+      * Admin email
       *
       * @return string
       */
-     public function getName();
+     public function getAdminEmail();
 
      /**
-      * Return value
+      * Return pass
       *
       * @return string
       */
-     public function getValue();
+     public function getAdminPassword();
 	 
      /**
-      * Return configuration entity
+      * Return level
       *
-      * @return void|int
+      * @return int
       */
-     public function getEntity();
+     public function getAdminLevel();
 	 
      /**
-      * Set configuration id
+      * Return status
+      *
+      * @return int
+      */
+     public function getAdminStatus();
+	 
+     /**
+      * Set id
 	  *
       * @param int $value Value
       */
-     public function setId($value);
+     public function setAdminId($value);
 
      /**
-      * Set the name
+      * Set email
       *
       * @param string $value Value
       */
-     public function setName($value);
+     public function setAdminEmail($value);
 
      /**
-      * Set value
+      * Set password
       *
       * @param string $value Value
       */
-     public function setValue($value);
+     public function setAdminPassword($value);
 	 
      /**
-      * Set configuration entity
+      * Set admin level
       *
       * @param int $value Value
       */
-     public function setEntity($value);
+     public function setAdminLevel($value);
+	 
+	 
+     /**
+      * Set admin status
+      *
+      * @param int $value Value
+      */
+     public function setAdminStatus($value);
 }
