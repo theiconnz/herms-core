@@ -3,7 +3,7 @@
 	"description" : "Herms core functions module",
 	"license" : "BSD-3-Clause",
 	"type" : "theicon-zf",
-	"version" : "0.0.1",
+	"version" : "0.0.2",
 	"minimum-stability" : "stable",
 	"homepage" : "https://theicon.co.nz",
 	"prefer-stable" : true,
