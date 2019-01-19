@@ -36,6 +36,8 @@ return [
     ],
     'controllers' => [
         'factories' => [
+            Controller\FrontController::class => 'HermsCore\Factory\FrontControllerFactory',
+            Controller\AdminController::class => 'HermsCore\Factory\AdminControllerFactory',
             Controller\CacheController::class => InvokableFactory::class,
         ],
     ],
@@ -60,6 +62,7 @@ return [
     'service_manager' => [
         'factories' => [
             'UrlManager' => Service\UrlFactory::class,
+            'UserManager' => Service\UserFactory::class,
             'CacheManager' => Service\CacheFactory::class,
 			'HermsCore\Service\ConfigurationFactory' => Service\ConfigurationFactory::class,
 			'HermsCore\Mapper\DbConfigurationMapper' => 'HermsCore\Service\DbConfigurationMapperFactory',

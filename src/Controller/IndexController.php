@@ -14,9 +14,8 @@
  */
 namespace HermsCore\Controller;
 
-use Zend\Mvc\Controller\AbstractActionController;
 
-class IndexController extends AbstractActionController
+class IndexController extends FrontController
 {
     public function indexAction()
     {

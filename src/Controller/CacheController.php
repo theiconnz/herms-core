@@ -15,7 +15,6 @@
 namespace HermsCore\Controller;
 
 use RuntimeException;
-use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
 use Zend\Console\Request as ConsoleRequest;
 use Zend\Math\Rand;
@@ -29,7 +28,7 @@ use Zend\Math\Rand;
  * @license  GPL http://theicon.co.nz
  * @link     http://theicon.co.nz
  */
-class CacheController extends AbstractActionController
+class CacheController extends FrontController
 {
     /**
     * Index action

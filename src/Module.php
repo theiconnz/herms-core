@@ -14,6 +14,9 @@
  */
 namespace HermsCore;
 
+use Zend\Mvc\MvcEvent;
+
+
 /**
  * Module Class
  *
@@ -34,5 +37,17 @@ class Module
     {
         return include __DIR__ . '/../config/module.config.php';
     }
+    
+    
+    public function onBootstrap(MvcEvent $e)
+    {
+        $eventManager        = $e->getApplication()->getEventManager();
+        $eventManager->attach('dispatch', array($this, 'loadConfiguration' ));
+    }
 
+    public function loadConfiguration(MvcEvent $e)
+    {
+        $controller = $e->getTarget();
+        $controller->layout()->appname = 'Herms';
+    }
 }
